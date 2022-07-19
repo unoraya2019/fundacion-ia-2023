@@ -6,7 +6,7 @@ output "DB_Endpoint" {
   value = module.database.db_endpoint
 }
 
-output "Cloudfront_DNS" {
+output "Cloudfront_S3" {
   value = module.frontend.domain_name
 }
 
