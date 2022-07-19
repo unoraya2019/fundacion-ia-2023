@@ -10,6 +10,6 @@ output "Cloudfront_S3" {
   value = module.frontend.domain_name
 }
 
-output "repository_url" {
+output "Repository_url" {
   value = module.backend.repository_url
 }

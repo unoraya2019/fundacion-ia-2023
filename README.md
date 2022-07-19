@@ -10,7 +10,7 @@ Este repositorio crea la infraestructura necesaria para el despliegue de la apli
 4. Setear AccessKey y SecretAccessKey en ficheros "config", "credentials" del directorio ~/.aws/ desde donde se realizara el despligue.
 5. Validar datos para despliegue centralizado en fichero terraform.tfvars (Nombre Proyecto, Account, Region)....
 
-# Deployment de IaC - Directorio /iac
+# Deployment de IaC
 
 1. Command: terraform init
 2. Command: terraform apply --auto-approve --target module.network
@@ -29,7 +29,7 @@ DNS_Alb = "alb-production-backend-iac-285xxxx.us-east-1.elb.amazonaws.com"
 repository_url = "761265xxxx.dkr.ecr.us-east-1.amazonaws.com/fundacionbolivar"
 ```
 
-# Conexión EC2
+# Conexión EC2 - Bastión
 
 1. aws ec2 describe-instances --filters "Name=tag:Name,Values=ec2-bastion" \
    --query 'Reservations[*].Instances[*].{Instance:InstanceId,Name:Tags[?Key==`Name`]|[0].Value}' \
