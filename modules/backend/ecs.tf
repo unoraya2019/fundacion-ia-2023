@@ -86,9 +86,9 @@ resource "aws_lb_target_group" "iac" {
     healthy_threshold   = "10"
     interval            = "60"
     protocol            = "HTTP"
-    matcher             = "200"
+    matcher             = "404"
     timeout             = "10"
-    path                = "/"
+    path                = "/404"
     unhealthy_threshold = "3"
   }
 
