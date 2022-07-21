@@ -27,3 +27,7 @@ domain_app        = "fundacionbolivardavivienda.unoraya.com"
 cpu               = 512
 memory            = 1024
 ecr_name          = "fundacionbolivar"
+
+# Frontend 
+
+bucket-name = "assets.fundacionbolivardavivienda.unoraya.com"

@@ -24,7 +24,6 @@ resource "aws_internet_gateway" "iac" {
 resource "aws_vpc_dhcp_options" "iac" {
   domain_name = "iac.local"
   domain_name_servers = [
-    "AmazonProvidedDNS",
     "1.1.1.1",
     "8.8.8.8"
   ]

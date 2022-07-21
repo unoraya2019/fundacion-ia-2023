@@ -76,7 +76,7 @@ module "frontend" {
   source          = "./modules/frontend"
   project         = var.project
   region          = var.region
-  bucket-name     = var.domain_app
+  bucket-name     = var.bucket-name
   certificate_arn = local.certificate_arn
   dns_alb         = module.backend.dns_alb
   account         = var.account

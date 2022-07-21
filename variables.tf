@@ -96,3 +96,9 @@ variable "memory" {
 variable "ecr_name" {
   description = "ECR Name"
 }
+
+# Frontend
+
+variable "bucket-name" {
+  description = "Bucket Name to Static Content"
+}
