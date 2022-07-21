@@ -24,25 +24,18 @@ resource "aws_cloudfront_distribution" "iac" {
     response_page_path    = "/"
   }
 
-
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = local.s3_origin_id
 
+    cache_policy_id        = "658327ea-f89d-4fab-a63d-7e88639e58f6"
     min_ttl                = 0
     default_ttl            = 3600
     max_ttl                = 86400
-    viewer_protocol_policy = "allow-all"
-
-    forwarded_values {
-      query_string = false
-
-      cookies {
-        forward = "none"
-      }
-    }
+    viewer_protocol_policy = "redirect-to-https"
   }
+
 
   price_class = "PriceClass_All" # Use All Edge Locations (Best Performance)
 
