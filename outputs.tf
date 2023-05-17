@@ -2,8 +2,12 @@ output "DNS_Alb" {
   value = module.backend.dns_alb
 }
 
-output "DB_Endpoint" {
+/*output "DB_Endpoint" {
   value = module.database.db_endpoint
+}*/
+
+output "DB_Endpoint_postgresql" {
+  value = module.database.db_endpoint_postgrest
 }
 
 output "Cloudfront_S3" {

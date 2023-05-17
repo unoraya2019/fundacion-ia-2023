@@ -111,7 +111,8 @@ resource "aws_iam_role_policy" "ecsTaskExecutionPolicy" {
             "servicediscovery:UpdateInstanceCustomHealthStatus",
             "ec2:AttachNetworkInterface",
             "autoscaling-plans:CreateScalingPlan",
-            "ecr:GetRepositoryPolicy"
+            "ecr:GetRepositoryPolicy",
+            "s3:*"
           ],
           "Resource" : "*"
         },

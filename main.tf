@@ -51,7 +51,7 @@ module "backend" {
   certificate_arn             = local.certificate_arn
   security_groups             = local.sg_alb
   security_group_microservice = [local.sg_alb]
-  db_host                     = module.database.db_endpoint
+  db_host                     = module.database.db_endpoint_postgrest
   db_username                 = var.db_username
   db_password                 = var.db_password
   db_name                     = var.db_name

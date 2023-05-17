@@ -50,13 +50,13 @@ variable "cluster_name" {
   description = "Name of Mysql Cluster"
 }
 variable "db_engine" {
-  default = "aurora-mysql"
+  default = "aurora-postgresql"
 }
 variable "db_engine_version" {
-  default = "5.7.mysql_aurora.2.10.2"
+  default = "13.8"
 }
 variable "db_parameter_group_name" {
-  default = "default.aurora-mysql5.7"
+  default = "default.aurora-postgresql14"
 }
 
 # EC2

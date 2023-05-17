@@ -33,8 +33,8 @@ variable "ingress_rules_sg_rds_prod" {
       cidr_blocks = [
         "0.0.0.0/0"
       ]
-      from_port = 3306
-      to_port   = 3306
+      from_port = 5432
+      to_port   = 5432
       protocol  = "tcp"
     }
   ]
